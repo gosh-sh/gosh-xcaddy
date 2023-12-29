@@ -14,13 +14,13 @@ CF_TOKEN=...
 ```
 
 3. `caddy/Caddyfile`
-```
+```hcl
 https://example.com {
         tls {
                 dns cloudflare {env.CF_TOKEN}
                 resolvers 1.1.1.1  # optional
         }
-        ...
+        # ...
 }
 ```
 
