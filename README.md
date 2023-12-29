@@ -1,5 +1,7 @@
 # GOSH's Caddy build with Cloudflare tls
 
+![woodpecker](https://builder.gosh.sh/api/badges/7/status.svg)
+
 ## Setup
 
 1. Create new token https://dash.cloudflare.com/profile/api-tokens
@@ -49,3 +51,6 @@ services:
 ```
 
 5. Turn on "Proxied" in Cloudflare's DNS Dashboard
+
+Credits:
+https://roelofjanelsinga.com/articles/using-caddy-ssl-with-cloudflare/
