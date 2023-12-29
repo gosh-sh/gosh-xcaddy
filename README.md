@@ -18,7 +18,7 @@ CF_TOKEN=...
 https://example.com {
         tls {
                 dns cloudflare {env.CF_TOKEN}
-                resolvers 1.1.1.1
+                resolvers 1.1.1.1  # optional
         }
         ...
 }
@@ -37,7 +37,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "443:443/udp"
+      - "443:443/udp" # Used by QUIC / HTTP/3
     env_file: ${PWD}/caddy_cf_token
     volumes:
       - ./caddy:/etc/caddy
