@@ -3,9 +3,13 @@ when:
   - event: push
     branch: main
 
+variables:
+  - &build_plugin "woodpeckerci/plugin-docker-buildx:latest"
+  - &CADDY_VERSION "2.8.4"
+
 steps:
   publish:
-    image: woodpeckerci/plugin-docker-buildx:latest
+    image: *build_plugin
     secrets:
       - docker_username
       - docker_password
@@ -20,4 +24,8 @@ steps:
       platforms: linux/amd64,linux/arm64
       repo: teamgosh/caddy
       dockerfile: Dockerfile
-      tag: latest
+      build_args:
+        CADDY_VERSION: *CADDY_VERSION
+      tags:
+        - latest
+        - *CADDY_VERSION
