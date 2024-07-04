@@ -5,7 +5,7 @@ when:
 
 steps:
   publish:
-    image: woodpeckerci/plugin-docker-buildx:2
+    image: woodpeckerci/plugin-docker-buildx:latest
     secrets:
       - docker_username
       - docker_password

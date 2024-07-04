@@ -1,6 +1,6 @@
-# syntax=docker/dockerfile:1.6.0
+# syntax=docker/dockerfile:1.8.0
 
-ARG CADDY_VERSION=2.7.6
+ARG CADDY_VERSION=2.8.4
 
 FROM caddy:${CADDY_VERSION}-builder AS caddy-builder
 
